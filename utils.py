@@ -164,8 +164,15 @@ def get_ref_trajectory():
     return X_ref, U_ref, X_lin_ref, U_lin_ref
 
 
-def save_to_file(x_history):
+def save_to_file(x_history, X_ref):
     """Save state trajectory to csv file to visualize with Julia."""
+
+    # Save trajectory
     filename = "X_quadrotor.csv"
     df = pd.DataFrame(x_history)   # convert array into dataframe
+    df.to_csv(filename, index=False, header=False, float_format='%f')
+
+    # Save reference trajectory
+    filename = "X_ref.csv"
+    df = pd.DataFrame(X_ref)  # convert array into dataframe
     df.to_csv(filename, index=False, header=False, float_format='%f')

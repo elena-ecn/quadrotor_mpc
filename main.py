@@ -21,7 +21,7 @@ def main():
     plotter.plot_trajectories_vel(x_history, X_ref)
 
     # Save data for visualization
-    utils.save_to_file(x_history)
+    utils.save_to_file(x_history, X_ref)
 
 
 if __name__ == "__main__":

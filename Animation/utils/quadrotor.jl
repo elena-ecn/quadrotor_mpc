@@ -1,3 +1,7 @@
+# Acknowledgement: The following Julia code for the drone visualization was
+# written as part of the Optimal Control course 16-745 at Carnegie Mellon University
+# by Prof. Zachary Manchester and his TAs.
+
 function dcm_from_mrp(p)
     p1,p2,p3 = p
     den = (p1^2 + p2^2 + p3^2 + 1)^2

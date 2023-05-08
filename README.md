@@ -23,15 +23,6 @@ $$
  \end{align*}
  $$
 
- $$\begin{align*}
-\min_{x_{1:N},u_{1:N-1}} \quad & \sum_{i=1}^{N-1} \bigg[ (x_i - x_{i,ref})^TQ(x_i - x_{i,ref}) + (u_i - u_{i,ref})^TR(u_i - u_{i,ref}) \bigg] + \frac{1}{2}(x_N - x_{N,ref})^TQ_f(x_N - x_{N,ref}) \\
-\text{st} \quad & x_1 = x_{\text{IC}} \\
-& x_{k+1} = f(\bar{x}_k, \bar{u}_k) + \bigg[\frac{\partial f}{\partial x} \bigg|_{\bar{x}_k, \bar{u}_k} \bigg](x_k - \bar{x}_k) + \bigg[\frac{\partial f}{\partial u} \bigg|_{\bar{x}_k, \bar{u}_k} \bigg](u_k - \bar{u}_k) \quad  \text{for } i = 1,2,\ldots,N-1 \\
-
-& u_{min} \leq u_i \leq u_{max} \quad ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \text{for } i = 1,2,\ldots,N-1
-\end{align*}
-$$
-
 
 
 

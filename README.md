@@ -14,15 +14,13 @@ $x_{ref}, u_{ref}$.
 The MPC controller solves the following optimization problem :
 
 
-$$ 
-\\begin{aligned} 
-\\min_{x_{1:N},u_{1:N-1}} \\quad & \\sum_{i=1}^{N-1} \\bigg[ (x_i - x_{i,ref})^TQ(x_i - x_{i,ref}) + (u_i - u_{i,ref})^TR(u_i - u_{i,ref}) \\bigg] + \\frac{1}{2}(x_N - x_{N,ref})^TQ_f(x_N - x_{N,ref}) \\\\
- \\text{st} \\quad 
- & x_1 = x_{\\text{IC}} \\\\ 
- & x_{k+1} = f(\\bar{x}_k, \\bar{u}_k) + \\bigg[\\frac{\\partial f}{\\partial x} \\bigg|_{\\bar{x}_k, \\bar{u}_k}  \\bigg](x_k - \\bar{x}_k) + \\bigg[\\frac{\\partial f}{\\partial u} \\bigg|_{\\bar{x}_k, \\bar{u}_k}  \\bigg](u_k - \\bar{u}_k)   \\quad \\text{for } i = 1,2,\\ldots,N-1 \\\\ 
- & u_{min} \\leq u_i \\leq u_{max} \\quad ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \\text{for } i = 1,2,\\ldots,N-1 \\\\ 
- \\end{aligned}
- $$
+$$\\begin{aligned} 
+\\min\_{x_{1:N},u_{1:N-1}} \\quad & \\sum\_{i=1}^{N-1} \\bigg[ (x\_i - x\_{i,ref})^TQ(x\_i - x\_{i,ref}) + (u\_i - u\_{i,ref})^TR(u\_i - u\_{i,ref}) \\bigg] + \\frac{1}{2} (x\_N - x\_{N,ref})^TQ\_f(x\_N - x\_{N,ref}) \\\\
+\\textrm{s.t.} \\quad 
+ & x\_1 = x\_{\\text{IC}} \\\\ 
+ & x\_{k+1} = f(\\bar{x}\_k, \\bar{u}\_k) + \\bigg[\\frac{\\partial f}{\\partial x} \\bigg|\_{\\bar{x}\_k, \\bar{u}\_k}  \\bigg](x\_k - \\bar{x}\_k) + \\bigg[\\frac{\\partial f}{\\partial u} \\bigg|_{\\bar{x}_k, \\bar{u}_k}  \\bigg](u_k - \\bar{u}_k)   \\quad \\text{for } i = 1,2,\\ldots,N-1 \\\\ 
+ & u\_{min} \\leq u\_i \\leq u\_{max} \\quad ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ \\text{for } i = 1,2,\\ldots,N-1 \\\\ 
+ \\end{aligned}$$
 
 
 
